@@ -1,0 +1,58 @@
+<body>
+  <div class="div2 shadow-lg" style='background-color:white'>
+          <div class="container custom-container">
+              <div class="col-md-12">
+                  
+    <h3 class="mb-3 text-center">Apply Leave</h3>
+<h6>Your Available Leave : {{currentEmployeeAvailableLeave}}</h6>
+<div class="emp">
+    <div class="form-group">
+      <label for="eid">Employee Id :</label>
+      <input type="text" ng-required="true" ng-minlength=5 [(ngModel)]="currentEmployeeId" class="form-control"
+        placeholder="EID" readonly>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="left">
+    <div class="form-group">
+      <label for="fromDate">Select from Date</label>
+      <input type="date" min="{{today| date:'yyyy-MM-dd'}}" max="{{tillDate| date:'yyyy-MM-dd'}}"  ng-required="true" [(ngModel)]="leaveDetails.fromDate"
+        class="form-control" placeholder="dd-MM-yyy" >
+    </div>
+  </div>
+  <div class="right">
+    <div class="form-group">
+      <label for="toDate">Select till Date</label>
+      <input type="date" min="{{today| date:'yyyy-MM-dd'}}" max="{{lastDate| date:'yyyy-MM-dd'}}" ng-required="true" [(ngModel)]="leaveDetails.toDate"
+        class="form-control" placeholder="dd-MM-yyy">
+    </div>
+  </div>
+  <div class="emp">
+    <div class="form-group">
+      <textarea [(ngModel)]="leaveDetails.leaveComment" class="form-control" placeholder="leave a comment here (:">
+        </textarea>
+    </div>
+  </div>
+
+  <div class="selLev">
+    <div class="form-group">
+      <label for="leaveType">Select Leave Type</label><br>
+      <select name="leaveType" [(ngModel)]="leaveDetails.leaveType">
+        <option value="EL"  selected>Earned Leave</option>
+        <option value="CL">Casual Leave</option>
+        <option value="LOP">Loss Of Pay</option>
+      </select>
+    </div>
+  </div>
+  
+    <div id="sec" class="form-group">
+      <button id="create" class="btn btn-success btn-lg btn-block" (click)="addLeave()">
+        Apply Leave</button>
+    </div>
+  </div>
+</div>
+</div>
+</body>

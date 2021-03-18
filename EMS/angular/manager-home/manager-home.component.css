@@ -1,0 +1,32 @@
+h3 {
+     font-family: 'Courier New', Courier, monospace;
+    color: rgb(141, 106, 54);
+    margin-left: 40%;
+}
+h6 {
+    
+   color: rgb(141, 106, 54);
+   margin-left: 40%;
+}
+
+#fourth {
+    color: blanchedalmond;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#right {
+    float: right;
+    margin-left: 950%;
+}
+body{
+
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #FFF8DC;
+    height:inherit;
+}
+
+#home
+{
+    background-color:burlywood;
+    border-radius: 15px;
+}

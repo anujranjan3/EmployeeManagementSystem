@@ -1,0 +1,62 @@
+body{
+
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #FFF8DC;
+    height:inherit;
+}
+
+.div2 {
+
+    width: 38%;
+    height: 1%;
+    top: 10px;
+    border-radius: 30px;
+    margin: auto;
+  }
+
+h3{
+  
+    padding-top: 5%;
+    text-decoration-line:underline;
+  }
+  h6{
+      margin-left: 26%;
+  }
+
+#create{
+
+    border-radius:50px;
+    width: 50%;
+    margin-left: 26%;
+    margin-top: 47%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+
+#sec{
+
+   
+      padding-bottom: 5%;
+      padding-top: 10%;
+  }
+.emp
+{
+ 
+    margin-left: 26%;
+    float: left;
+      
+}
+.left{
+    margin-left: 7%;
+    float: left;
+  }
+.right{
+  margin-right: 7%;
+    float: right;
+  }
+
+  .selLev{
+      float: left;
+      margin-left: 37%;
+  }
+  

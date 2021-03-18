@@ -1,0 +1,34 @@
+
+<div class="container custom-container-2">
+  <div class="no-data text-center" *ngIf="leave.length == 0">
+    <p>You have not Applied any leave hurrah!!</p>
+    <button class="btn btn-outline-primary" routerLink="/applyLeave">Apply Leave</button>
+  </div>
+  <div *ngIf="leave.length !== 0">
+    <h3 class="mb-3 text-center">Your Leave List</h3>
+    <div class="col-md-12">
+      <table class="table table-hover shadow-lg table-striped" id="tab">
+        <thead>
+          <tr>
+            <th scope="col">Leave Type</th>
+            <th scope="col">Leave applied from </th>
+            <th scope="col">Leave applied till Date</th>
+            <th scope="col">Leave Status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let leave of leave">
+            <td>{{leave.leaveType}}</td>
+            <td>{{leave.fromDate | date}}</td>
+            <td>{{leave.toDate | date}}</td>
+            <td>{{leave.leaveStatus}}</td>
+            <td>
+              <button class="delete btn btn-danger" (click)="cancelLeave(leave.leaveId)">Cancel Leave</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+<html>
+<title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</title>
+
+<body>
+  <div class="sticky-top">
+    <nav id="fourth" class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" routerLink="/home" routerLinkActive="active">
+        <img id="second" src="/assets/img/homeimg.png" alt="home-image">HOME </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/login" routerLinkActive="active">LOGIN</a>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="/aboutus" routerLinkActive="active"> ABOUT-US</a>
+          </li> -->
+        </ul>
+      </div>
+    </nav>
+
+    <div class="wrapper fadeInDown">
+      <div class=" first" id="formContent">
+        <div class="fadeIn first">
+        </div>
+        <div>
+          Email :<br> <input type="text" id="login" class="fadeIn second" name="email" [(ngModel)]="email" required/>
+          Password : <br><input type="password" id="password" class="fadeIn third" name="password"
+            [(ngModel)]="password" required/>
+        </div>
+        <button (click)="Login()" class="btn btn-success">Login</button>
+        <div id="formFooter">
+          <a class="underlineHover" href="#" onclick="alert('Contact Your Manager')">Forgot Password?</a>
+        </div>
+
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+    </div>
+    </body>
+    </html>
+    

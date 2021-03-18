@@ -1,0 +1,48 @@
+body{
+
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #FFF8DC;
+    height:inherit;
+}
+.shadow-custom {
+
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .25), 0 3px 20px 20px rgba(0, 0, 0, 0.06) !important;
+    border-radius: 30px;
+  }
+.div2 {
+
+    width: 50%;
+    height: 1%;
+    top: 10px;
+    border-radius: 30px;
+    margin: auto;
+  }
+
+h3{
+  
+    padding-top: 5%;
+    text-decoration-line:underline;
+  }
+
+#create{
+
+    border-radius:50px;
+    width: 50%;
+    margin-left: 22%;
+  }
+
+#sec{
+
+      padding-bottom: 5%;
+      padding-top: 3%;
+  }
+
+.left{
+
+    float: left;
+  }
+.right{
+  
+    float: right;
+  }
+  

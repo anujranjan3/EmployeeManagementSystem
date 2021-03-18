@@ -1,0 +1,31 @@
+#first {
+    background-color: transparent;
+    font-weight: bolder;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    border: 1px solid;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    box-shadow: 5px 10px rgb(68, 51, 51)
+}
+
+#fourth {
+    color: blanchedalmond;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#second {
+    width: 10%;
+    border-radius: 100%;
+}
+body{
+    background-color: #FFF8DC;
+}
+#third{
+    margin-left: 32%;
+}
+#tab{
+    background-color: #FFF8DC;
+    border-radius: 30px;
+}

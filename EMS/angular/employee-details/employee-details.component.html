@@ -1,0 +1,63 @@
+<div class="container custom-container-2">
+
+  <div class="no-data text-center" *ngIf="Employee.length == 0">
+    <p>There is no employee added yet!</p>
+    <button class="btn btn-outline-primary" routerLink="managerHome/createEmployee">Add
+      Empoyee</button>
+  </div>
+
+  <div *ngIf="Employee.length !== 0">
+    <h3 class="mb-3 text-center">Employees List</h3>
+
+    <div class="container-fluid" >
+     
+      <form class="d-flex">
+        <table class="shadow-sm" id="search">
+        
+      <tr><td> <input class="form-control me-2" type="text" [(ngModel)]="searchEid" name="searchEid" placeholder="Enter Employee Id" aria-label="Search"></td>
+      <td>  <button class="btn btn-primary" routerLink="/employee-search/{{searchEid}}" routerLinkActive="active" type="submit">Search</button></td>
+      </tr>
+    </table></form>
+    </div>
+
+    <div class="col-md-12">
+      <table class="table table-hover shadow-lg table-striped" id="tab">
+        <thead>
+          <tr>
+            <th scope="col">Employee Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Age</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Email</th>
+            <th scope="col">Available-Leave</th>
+            <th scope="col">Role</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Address</th>
+            <th scope="col" colspan="2">Action</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let employee of Employee">
+            <td>{{employee.eid}}</td>
+            <td>{{employee.fname}}</td>
+            <td>{{employee.lname}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.availableLeave}}</td>
+            <td>{{employee.role}}</td>
+            <td>{{employee.phoneNumber}}</td>
+            <td>{{employee.address}}</td>
+            <td>
+              <button class="edit btn btn-success" routerLink="/editEmployee/{{employee.eid}}"> Edit </button>
+            </td>
+            <td><button class="delete btn btn-danger" (click)="deleteEmployee(employee.eid)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
